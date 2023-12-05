@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function greet()
+            {
+                alert('Hello, ' + document.getElementById('name').value+ '!');
+            }
+        </script> <!-- функция alert дает нам всплывающее окно , символ "+" означает конкотинацию (склеивает две строки). Также в объекте "document" в javascript есть функция getElementById для вызова функции из объекта или переменной используется "."-->
+        <title>JavaTry</title>
+    </head>
+    <body>
+        <form id="demo" onsubmit="greet(); return false;"> <!-- return false в данном случает перезагружает страницу браузера-->
+            <input id="name" placeholder="Name" type="text"/>
+            <input type="submit"/>
+    </body>
+</html>

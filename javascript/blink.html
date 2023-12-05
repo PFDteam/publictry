@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //toogles visibility of greeting
+            function blink()
+        {
+            var div = document.getElemendById('greeting');
+            if(div.style.visibility == "hidden")
+            {
+                div.style.visibility = "visible";
+            }
+            else
+            {
+                div.style.visibility = "hidden";
+            }
+        }
+        //blink every 500 ms глобальная переменная window действует на окно браузера в целом
+        window.setInterval(blink, 500);
+
+        </script>
+        <style>
+            #greeting
+            {
+                font-size: 96pt;
+                margin:240px;
+                text-align: center;
+            }
+        </style>
+        <title>Blink</title>
+    </head>
+    <body>
+        <div id="greeting">
+            hello, world
+        </div>
+    </body>
+</html>

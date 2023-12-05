@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script> src="https://code.jquery.com/jquery-latest.min.js"</script>
+        <script>
+            function quote()
+            {
+                var url='quote.php?symbol=' +$('#symbol').val();
+                $.getJSON(url, function(data){
+                    $('#price').html(data.price);
+                    // Функция .html позволяет изменить содержимое узла дерева, в данном примере строка 21 вставляет цену на место фразы:"to be determined"
+                });
+            }
+        </script>
+        <title>ajax-0</title>
+    </head>
+    <body>
+        <form onsubmit="quote();return false;">
+        Symbol:<input autocomplete="off" autofocus id="symbol" type="text"/>
+        <br/>
+        Price:<span id="price">to be determined</span>
+        <br/><br/>
+        <input tupe="submit" value="Get Quote"/>
+        </form>
+    </body>
+</html>

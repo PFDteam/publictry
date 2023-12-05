@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaFormRegistry-0</title>
+    </head>
+    <body>
+        <form action="register.php" id="registration" method="get">
+            Email:<input name="email" type="text"/>
+            <br/>
+            Password:<input name="password" type="password"/>
+            <br/>
+            Password(again):<input name="confirmation" type="password"/>
+            <br/>
+            I agree to the terms and conditions: <input name="agreement" type="checkbox"/>
+            <br/><br/>
+            <input type="submit" value="Register"/>
+        </form>
+        <script>
+            //onready
+            $('#registration').submit(function() {
+                if($('#registration input[name=email]').val() == '')
+                {
+                    alert('You must provide your email address!');
+                    return false;
+                }
+                //validate password
+                else if($('#registration input[name=password]').val() == '')
+                {
+                    alert('You must provide your password!');
+                    return false;
+                }
+                //validate confirmation
+                else if ($('#registration input[name=password]').val() != ($('#registration input [name=confirmation])'.val())))
+                {
+                    alert('Password do not match!');
+                    return false;
+                }
+                //validate agreement
+                else if($(!'#registration input name=agreement'))
+                {
+                    alert('You must agree to the terms and conditions!');
+                    return false;
+                }
+                //valid
+                return true;
+
+            });
+        </script>
+

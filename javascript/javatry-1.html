@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <title>JavaTry-1</title>
+    </head>
+    <body>
+        <form id="demo">
+            <input id="name" placeholder="Name" type="text"/>
+            <input type="submit"/>
+        </form>
+        <script>
+            document.getElementById('demo').onsubmit = function(){
+                alert('hello, ' + document.getElementById('name').value + '!');
+                return false;
+            }
+        </script> <!-- 12я строка указывает на тег form и использует слушателя onsubmit , также в джаве оставляют открывающую фигурную скобку на той же строке на которой ее открывают-->
+    </body>
+</htmL>
